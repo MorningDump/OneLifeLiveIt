@@ -1,0 +1,187 @@
+// Dashboard layout and Sidebar
+// -------------------------
+
+html.is-dashboard {
+  height: 100%;
+  overflow-y: scroll;
+  body {
+    min-height: 100%;
+    overflow: hidden;
+    background-color: @dashboard-bg;
+  }
+}
+
+// the wrapper
+.dashboard-wrapper {
+  position: relative;
+  min-height: 100%;
+  .transition(all .5s);
+  .clearfix();
+  &.toggle-sidebar-secondary {
+    .translate(-@sidebar-secondary-width, 0);
+  }
+}
+
+// Sidebars primary + secondary
+// ------------------------------ 
+.dashboard-sidebar {
+  min-height: 100%;
+  top: 0;
+  // Sidebar primary (left)
+  // ------------------------------
+  &.sidebar-primary {
+    width: @sidebar-primary-width;
+    float: left;
+    position: relative;
+    margin-left: -@sidebar-primary-width;
+    z-index: 1000;
+    background-color: @sidebar-bg;
+  }
+  // Sidebar secondary (right)
+  // ------------------------------
+  &.sidebar-secondary {
+    width: @sidebar-secondary-width;
+    float: right;
+    position: relative;
+    right:0;
+    margin-right: -@sidebar-secondary-width;
+    z-index: 1001;
+    background-color: @sidebar-bg;
+  }
+  &.sidebar-primary:before,
+  &.sidebar-secondary:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 9000px;
+    background-color: @sidebar-bg;
+    z-index: -5;
+  }
+}
+
+// Sidebar primary toggle (according to screen size)
+// -------------------------
+@media screen and (max-width: 767px) {
+  // For small screens
+  .dashboard-wrapper {
+    left: 0;
+    padding-left: 0;
+  }
+  .dashboard-wrapper.toggle-sidebar-primary {
+    left: @sidebar-primary-width;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  // For larger screens
+  .dashboard-wrapper {
+    left: 0;
+    padding-left: @sidebar-primary-width;
+  }
+  .dashboard-wrapper.toggle-sidebar-primary {
+    left: 0;
+    padding-left: 0;
+  }
+}
+
+// sidebar contents
+.sidebar-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: @navbar-height;
+  color: #fff;
+  background-color: @sidebar-header-bg;
+  .sidebar-secondary & {
+    background-color: @brand-secondary;
+  }
+  a {
+    color: @sidebar-link-color;
+    &:hover,
+    &:focus,
+    &:active {
+      color: @sidebar-link-color;
+      text-decoration: none;
+    }
+  }
+  .sidebar-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+.sidebar-subheader {
+  padding: 1em;
+  color: @sidebar-text-color;
+}
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  >li {
+    &.active > a,
+    &.new > a {
+      position: relative;
+      background-color: @sidebar-link-active-bg;
+      &:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: @brand-primary;
+      }
+    }
+    .sidebar-secondary &.new > a:before {
+      background-color: @brand-info;
+    }
+    &.header {
+      padding: 20px 15px;
+      color: @sidebar-header-text-color;
+      text-transform: uppercase;
+      font-size: 85%;
+    }
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: @sidebar-link-color;
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        color: @sidebar-link-color;
+        background: @sidebar-link-hover-bg;
+        text-decoration: none;
+      }
+      [class^="icon-"]:first-child {
+        margin-right: 6px;
+      }
+    }
+  }
+  .sidebar-nav-dropdown {
+    padding-left: 0;
+    list-style: none;
+    li {
+      &.active >a {
+        color: @sidebar-nav-dropdown-link-active-color;
+      }
+      background-color: darken(@sidebar-bg, 5%);
+      >a {
+        padding-left: 1.5em;
+      }
+    }
+  }
+}
+
+.page-content {
+  overflow: hidden;
+  [class^=container] {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 1250px;
+  }
+}

@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B070D39-98F6-4296-96D7-92F75532BF4D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebVideoPortal</RootNamespace>
+    <AssemblyName>WebVideoPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\QuestionaireController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Filters\HandleExceptionAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\EnumDropDownList.cs" />
+    <Compile Include="Helpers\HMTLHelperExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\patterns\autosize\jquery.autosize.js" />
+    <Content Include="Content\patterns\autosize\jquery.autosize.min.js" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\patterns\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\patterns\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\patterns\chartjs\Chart.js" />
+    <Content Include="Content\patterns\chartjs\Chart.min.js" />
+    <Content Include="Content\patterns\css\theme.min.css" />
+    <Content Include="Content\patterns\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\patterns\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\patterns\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\patterns\fullcalendar\fullcalendar.css" />
+    <Content Include="Content\patterns\fullcalendar\fullcalendar.js" />
+    <Content Include="Content\patterns\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Content\patterns\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\patterns\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Content\patterns\fullcalendar\gcal.js" />
+    <Content Include="Content\patterns\fullcalendar\lang-all.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ar.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\bg.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ca.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\cs.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\da.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\de-at.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\de.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\el.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\en-au.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\en-ca.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\en-gb.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\es.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\fa.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\fi.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\fr.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\hi.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\hr.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\hu.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\id.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\is.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\it.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ja.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ko.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\lt.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\lv.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\nl.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\pl.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\pt-br.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\pt.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ro.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\ru.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\sk.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\sl.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\sr.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\sv.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\th.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\tr.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\uk.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\vi.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Content\patterns\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Content\patterns\fullcalendar\lib\moment.min.js" />
+    <Content Include="Content\patterns\ico\apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="Content\patterns\ico\apple-touch-icon-152x152-precomposed.png" />
+    <Content Include="Content\patterns\ico\favicon.ico" />
+    <Content Include="Content\patterns\img\img-1200x900.jpg" />
+    <Content Include="Content\patterns\img\img-400x300.jpg" />
+    <Content Include="Content\patterns\img\img-400x400.jpg" />
+    <Content Include="Content\patterns\img\img-600x450.jpg" />
+    <Content Include="Content\patterns\img\img-800x800.jpg" />
+    <Content Include="Content\patterns\img\logo-black.png" />
+    <Content Include="Content\patterns\img\logo-full-color.png" />
+    <Content Include="Content\patterns\img\logo-gray-scale.png" />
+    <Content Include="Content\patterns\img\logo-mono-chrome.png" />
+    <Content Include="Content\patterns\img\logo-white.png" />
+    <Content Include="Content\patterns\img\post-image.png" />
+    <Content Include="Content\patterns\img\slide-1-2.jpg" />
+    <Content Include="Content\patterns\img\slide-1.jpg" />
+    <Content Include="Content\patterns\img\slide-2.jpg" />
+    <Content Include="Content\patterns\img\user-female-1.jpg" />
+    <Content Include="Content\patterns\img\user-female-2.jpg" />
+    <Content Include="Content\patterns\img\user-male-1.jpg" />
+    <Content Include="Content\patterns\img\user-male-2.jpg" />
+    <Content Include="Content\patterns\isotope\isotope.pkgd.js" />
+    <Content Include="Content\patterns\isotope\isotope.pkgd.min.js" />
+    <Content Include="Content\patterns\jquery-labelauty\images\input-checked.png" />
+    <Content Include="Content\patterns\jquery-labelauty\images\input-unchecked.png" />
+    <Content Include="Content\patterns\jquery-labelauty\jquery-labelauty.css" />
+    <Content Include="Content\patterns\jquery-labelauty\jquery-labelauty.js" />
+    <Content Include="Content\patterns\jquery.countdown\jquery.countdown.js" />
+    <Content Include="Content\patterns\jquery.countdown\jquery.countdown.min.js" />
+    <Content Include="Content\patterns\jquery\jquery-1.11.1.min.js" />
+    <Content Include="Content\patterns\jquery\jquery-1.8.3.min.js" />
+    <Content Include="Content\patterns\jquery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\patterns\jquery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Content\patterns\jquery\jquery.validate.js" />
+    <Content Include="Content\patterns\jquery\jquery.validate.min.js" />
+    <Content Include="Content\patterns\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\patterns\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\patterns\js\chart-example.js" />
+    <Content Include="Content\patterns\js\demo.js" />
+    <Content Include="Content\patterns\js\holder.js" />
+    <Content Include="Content\patterns\js\html5shiv.min.js" />
+    <Content Include="Content\patterns\js\min\demo.min.js" />
+    <Content Include="Content\patterns\js\respond.min.js" />
+    <Content Include="Content\patterns\js\selectivizr-min.js" />
+    <Content Include="Content\patterns\prism\prism.css" />
+    <Content Include="Content\patterns\prism\prism.js" />
+    <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\patterns\simple-lines\simple-line-icons.css" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\patterns\summernote\summernote.css" />
+    <Content Include="Content\patterns\summernote\summernote.js" />
+    <Content Include="Content\patterns\summernote\summernote.min.js" />
+    <Content Include="Content\patterns\tags-input\bootstrap-tagsinput.css" />
+    <Content Include="Content\patterns\tags-input\bootstrap-tagsinput.js" />
+    <Content Include="Content\patterns\tags-input\bootstrap-tagsinput.min.js" />
+    <Content Include="Content\patterns\validator\validator.js" />
+    <Content Include="Content\patterns\validator\validator.min.js" />
+    <Content Include="Content\Scripts\validate.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\logo-black.png" />
+    <Content Include="Images\logo-white.png" />
+    <Content Include="Images\user-male-2.jpg" />
+    <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\patterns\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\patterns\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\patterns\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\patterns\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
+    <Content Include="Views\Security\ForgotPassword.cshtml" />
+    <Content Include="Views\Security\ResetPassword.cshtml" />
+    <Content Include="Views\Security\Register.cshtml" />
+    <Content Include="Views\Shared\_SecurityLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.css.map" />
+    <Content Include="Content\patterns\bootstrap-select\bootstrap-select.js.map" />
+    <Content Include="Content\patterns\css\theme.min.css.map" />
+    <Content Include="Content\patterns\less\alerts.less" />
+    <Content Include="Content\patterns\less\badges.less" />
+    <Content Include="Content\patterns\less\blog.less" />
+    <Content Include="Content\patterns\less\breadcrumbs.less" />
+    <Content Include="Content\patterns\less\buttons.less" />
+    <Content Include="Content\patterns\less\carousel.less" />
+    <Content Include="Content\patterns\less\charts.less" />
+    <Content Include="Content\patterns\less\code.less" />
+    <Content Include="Content\patterns\less\countdown.less" />
+    <Content Include="Content\patterns\less\dashboard.less" />
+    <Content Include="Content\patterns\less\dropdowns.less" />
+    <Content Include="Content\patterns\less\forms.less" />
+    <Content Include="Content\patterns\less\input-groups.less" />
+    <Content Include="Content\patterns\less\jumbotron.less" />
+    <Content Include="Content\patterns\less\labels.less" />
+    <Content Include="Content\patterns\less\list-group.less" />
+    <Content Include="Content\patterns\less\media.less" />
+    <Content Include="Content\patterns\less\mixins.less" />
+    <Content Include="Content\patterns\less\modals.less" />
+    <Content Include="Content\patterns\less\navbar.less" />
+    <Content Include="Content\patterns\less\navs.less" />
+    <Content Include="Content\patterns\less\pager.less" />
+    <Content Include="Content\patterns\less\pagination.less" />
+    <Content Include="Content\patterns\less\panels.less" />
+    <Content Include="Content\patterns\less\popovers.less" />
+    <Content Include="Content\patterns\less\prefixer.less" />
+    <Content Include="Content\patterns\less\pricing-tables.less" />
+    <Content Include="Content\patterns\less\progress-bars.less" />
+    <Content Include="Content\patterns\less\scaffolding.less" />
+    <Content Include="Content\patterns\less\tables.less" />
+    <Content Include="Content\patterns\less\tags.less" />
+    <Content Include="Content\patterns\less\theme.less" />
+    <Content Include="Content\patterns\less\thumbnails.less" />
+    <Content Include="Content\patterns\less\tooltips.less" />
+    <Content Include="Content\patterns\less\type.less" />
+    <Content Include="Content\patterns\less\variables.less" />
+    <Content Include="Content\patterns\less\video.less" />
+    <Content Include="Content\patterns\less\wells.less" />
+    <Content Include="Content\patterns\less\widgets.less" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Questionaire\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebVideoPortal.BL\WebVideoPortal.BL.csproj">
+      <Project>{fa764b97-2dc5-49ed-8cb1-3f27818eecb1}</Project>
+      <Name>WebVideoPortal.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebVideoPortal.Constants\WebVideoPortal.Constants.csproj">
+      <Project>{4a018681-03c9-48f8-b0dc-8568ce619e2c}</Project>
+      <Name>WebVideoPortal.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebVideoPortal.Models\WebVideoPortal.Models.csproj">
+      <Project>{a02a330a-a598-4d51-a7cd-f9f736a1ba31}</Project>
+      <Name>WebVideoPortal.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49871</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/WebVideoPortal</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:49865/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

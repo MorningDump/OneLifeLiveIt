@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVideoPortal", "WebVideoPortal\WebVideoPortal.csproj", "{0B070D39-98F6-4296-96D7-92F75532BF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVideoPortal.BL", "WebVideoPortal.BL\WebVideoPortal.BL.csproj", "{FA764B97-2DC5-49ED-8CB1-3F27818EECB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVideoPortal.DAL", "WebVideoPortal.DAL\WebVideoPortal.DAL.csproj", "{56B195B6-4E68-4AA2-93D8-4B141DA30D65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVideoPortal.Constants", "WebVideoPortal.Constants\WebVideoPortal.Constants.csproj", "{4A018681-03C9-48F8-B0DC-8568CE619E2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A5AACBEC-3827-40EE-A0C4-5B1F243652CC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebVideoPortal.Models", "WebVideoPortal.Models\WebVideoPortal.Models.csproj", "{A02A330A-A598-4D51-A7CD-F9F736A1BA31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B070D39-98F6-4296-96D7-92F75532BF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B070D39-98F6-4296-96D7-92F75532BF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B070D39-98F6-4296-96D7-92F75532BF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B070D39-98F6-4296-96D7-92F75532BF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA764B97-2DC5-49ED-8CB1-3F27818EECB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA764B97-2DC5-49ED-8CB1-3F27818EECB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA764B97-2DC5-49ED-8CB1-3F27818EECB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA764B97-2DC5-49ED-8CB1-3F27818EECB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B195B6-4E68-4AA2-93D8-4B141DA30D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B195B6-4E68-4AA2-93D8-4B141DA30D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B195B6-4E68-4AA2-93D8-4B141DA30D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B195B6-4E68-4AA2-93D8-4B141DA30D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A018681-03C9-48F8-B0DC-8568CE619E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A018681-03C9-48F8-B0DC-8568CE619E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A018681-03C9-48F8-B0DC-8568CE619E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A018681-03C9-48F8-B0DC-8568CE619E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02A330A-A598-4D51-A7CD-F9F736A1BA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02A330A-A598-4D51-A7CD-F9F736A1BA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02A330A-A598-4D51-A7CD-F9F736A1BA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02A330A-A598-4D51-A7CD-F9F736A1BA31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

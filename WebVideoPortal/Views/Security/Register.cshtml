@@ -1,0 +1,73 @@
+﻿@model UserRegisterModel2
+@{
+    Layout = "~/Views/Shared/_SecurityLayout.cshtml";
+    ViewBag.Title = "Register";
+}
+
+@section scripts
+{
+    <script src="~/Content/patterns/jquery/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Content/patterns/jquery/jquery.validate.min.js"></script>
+    <script src="~/Content/patterns/jquery/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Content/Scripts/validate.js"></script>
+    <script type="text/javascript">
+        jQuery.validator.addMethod("istrue", function (value, element, param) {
+            return element.checked;
+        });
+        jQuery.validator.unobtrusive.adapters.addBool("istrue");
+    </script>
+}
+
+<div class="panel-body">
+    <h3 class="text-center b-color space-15 f-uppercase">Registration</h3>
+    @if (!Model.IsValid)
+    {
+        <p class="text-center space-15 r-color">@Model.ErrorMessage</p>
+    }
+    @using (Html.BeginForm("Register", "Security", FormMethod.Post, new { @class = "m-t validatable-form", role = "form" }))
+    {
+        <div class="form-group">
+            <label for="Email">Name</label>
+            @Html.TextBoxFor(m => m.Name, new { type = "text", @class = "form-control", placeholder = "Enter your name" })
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.Name)
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            @Html.TextBoxFor(m => m.Email, new { type = "Email", @class = "form-control", placeholder = "Enter email" })
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.Email)
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Company</label>
+            @Html.TextBoxFor(m => m.CompanyName, new { type = "text", @class = "form-control", placeholder = "Enter your company name" })
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.CompanyName)
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Password</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password" })
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.Password)
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="Email">Confirm Password</label>
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Repeat Password" })
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="checkbox"><label> @Html.CheckBoxFor(m => m.IsAgree) I agree with <a href="#">terms and conditions</a></label></div>
+            <span class="help-block">
+                @Html.ValidationMessageFor(m => m.IsAgree)
+            </span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+    }
+</div>

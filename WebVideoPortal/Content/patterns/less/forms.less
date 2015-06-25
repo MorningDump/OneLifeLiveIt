@@ -1,0 +1,130 @@
+
+.form-control {
+  color: @form-control-text-color;
+  border-width: @form-control-border-width;
+  border-color: @form-control-border-color;
+  border-radius: @form-control-border-radius;
+  .box-shadow(none);
+  &:not(.input-sm, .input-lg) {
+    height: 36px;
+  }
+  &:focus {
+    border-color: @form-control-focus-border-color;
+    outline: 0;
+    .box-shadow(none);
+  }
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: darken(@form-control-disabled-bg, 5%);
+  }
+}
+
+.input-lg,
+.form-horizontal .form-group-lg .form-control {
+  border-radius: @form-control-border-radius;
+}
+
+.help-block {
+  font-size: 95%;
+}
+
+// fix: make form controls (input text) adapt to variable height (due to buttons border width)
+.input-group .form-control {
+  height: 100%;
+}
+// fix: bootstrap-tagsinput - add better styles
+.bootstrap-tagsinput {
+  .form-control;
+  width: 100%;
+}
+// fix: summernote RTF editor - add better styles
+.note-editor {
+  .form-control;
+  .btn-default {
+    .btn-white;
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border: 1px solid @base-border-color;
+    }
+  }
+  .note-editable {
+    background-color: #fff;
+  }
+}
+
+// Form control feedback states
+.has-warning {
+  .form-control-validation(@brand-warning; @brand-warning; @state-warning-bg);
+}
+.has-error {
+  .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+}
+.has-success {
+  .form-control-validation(@brand-success; @brand-success; @state-success-bg);
+}
+
+.form-control-feedback {
+  line-height: 2.5em;
+  .input-lg+& {
+    line-height: 3.3em;
+  }
+  .input-sm+& {
+    line-height: 2.2em;
+  }
+  .form-inline &,
+  .form-horizontal & {
+      line-height: 2.2em;
+  }
+}
+
+// Add Labelauty support, meke it support LESS theming
+// ------------------------------
+input.labelauty:checked {
+  & + label {
+    background-color: @brand-primary;
+  }
+  &:not([disabled]) + label:hover {
+    background-color: @brand-primary-light;
+  }
+}
+.labelauty-no-label {
+  &+label {
+    display: inline-block !important;
+  }
+}
+
+// fix: prevent safari mobile from zooming text inputs
+// ------------------------------
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .form-control {
+    font-size: @font-size-base;
+    line-height: @font-size-base + 2px;
+  }
+  select:focus,
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus {
+    font-size: @font-size-base;
+  }
+}
+
+// fix: input file width
+input[type="file"] {
+  width: 100%;
+}

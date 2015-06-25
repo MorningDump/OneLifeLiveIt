@@ -1,0 +1,133 @@
+﻿@using WebVideoPortal.Web.Helpers
+<!DOCTYPE html>
+<html class="is-dashboard" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="~/Content/patterns/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="~/Content/patterns/ico/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="assets/ico/favicon-144.png">
+    <link rel="stylesheet" href="~/Content/patterns/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/simple-lines/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Content/patterns/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/prism/prism.css">
+    <link rel="stylesheet" href="~/Content/patterns/summernote/summernote.css">
+    <link rel="stylesheet" href="~/Content/patterns/tags-input/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="~/Content/patterns/css/theme.min.css">
+    <link rel="stylesheet" href="~/Content/common.css">
+    <!--[if lt IE 9]>
+      <script src="~/Content/patterns/js/html5shiv.min.js"></script>
+      <script src="~/Content/patterns/js/selectivizr-min.js"></script>
+      <script src="~/Content/patterns/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="dashboard-sidebar sidebar-primary">
+            <div class="sidebar-header text-center">
+                <a class="navbar-brand" href="#link">
+                    <img class="brand-logo" alt="Logo" src="~/Content/patterns/img/logo-white.png">
+                    <span class="brand-name">Name</span>
+                </a><!-- /.navbar-brand -->
+            </div><!-- /.sidebar-header -->
+            <div class="sidebar-subheader text-center">
+                <img class="img-circle" src="~/Content/patterns/img/user-male-2.jpg" width="100" height="100" alt="img">
+                <p class="no-margin"><strong>@ViewBag.UserName</strong></p>
+            </div><!-- /.sidebar-subheader -->
+            <ul class="sidebar-nav">
+                @*<li class="@Html.IsSelected(controller: "Dashboard")">
+                        <a href="@Url.Action("Index", "Dashboard")">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>
+                    </li>*@
+                <li class="@Html.IsSelected(controller: "Video")">
+                    <a href="@Url.Action("Index", "Video")">
+                        <i class="fa fa-video-camera"></i>
+                        Our Videos
+                    </a>
+                </li>
+                <li class="@Html.IsSelected(controller: "Questionaire")">
+                    <a href="@Url.Action("Index", "Questionaire")">
+                        <i class="fa fa-question-circle"></i>
+                        Questionaire
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Logout", "Security")"><i class="fa fa-sign-out"></i> Log Out</a>
+                </li>
+            </ul><!-- /.sidebar-nav -->
+        </aside><!-- /.sidebar -->
+        <!-- Page content -->
+        <main class="page-content">
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <button type="button" class="btn navbar-btn btn-link pull-left" data-toggle="sidebar-primary"><i class="fa fa-fw text-white fa-align-justify"></i></button>
+                        </div><!-- /.col -->
+                        <div class="col-xs-6 text-center">
+                            <a class="navbar-brand" href="#link">
+                                <!-- <img class="brand-logo" alt="Logo" src="~/Content/patterns/img/logo-white.png"> -->
+                                <span class="brand-name">@ViewBag.Title</span>
+                            </a>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </nav><!-- /.navbar.navbar-inverse -->
+            @*<section class="section-xs bg-white border-default">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ol class="breadcrumb no-margin">
+                                @if (ViewContext.RouteData.Values["controller"].ToString() != "Dashboard")
+                                {
+                                    @Html.ActionLink("Home", "Index", "Dashboard")
+                                    <li class="active">
+                                        / @ViewBag.Title
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="active">
+                                        Home
+                                    </li>
+                                }
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>*@
+            @RenderBody()
+        </main><!-- /.page-content -->
+    </div><!-- /.dashboard-wrapper -->
+    <!-- last but not least the javascript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="~/Content/patterns/js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="~/Content/patterns/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/Content/patterns/prism/prism.js"></script>
+    <script src="~/Content/patterns/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="~/Content/patterns/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Content/patterns/jquery.countdown/jquery.countdown.min.js"></script>
+    <script src="~/Content/patterns/summernote/summernote.min.js"></script>
+    <script src="~/Content/patterns/tags-input/bootstrap-tagsinput.min.js"></script>
+    <script src="~/Content/patterns/autosize/jquery.autosize.min.js"></script>
+    <script src="~/Content/patterns/validator/validator.min.js"></script>
+    <script src="~/Content/patterns/chartjs/Chart.min.js"></script>
+    <script src="~/Content/patterns/jquery-labelauty/jquery-labelauty.js"></script>
+    <script src="~/Content/patterns/js/holder.js"></script>
+    <script src="~/Content/patterns/js/demo.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

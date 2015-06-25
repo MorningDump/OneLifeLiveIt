@@ -1,0 +1,410 @@
+// Scaffolding
+// -------------------------
+
+body {
+  padding-top: @body-padding;
+  color: @text-color;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  -webkit-font-smoothing: antialiased;
+  a {
+    color: @link-color;
+    &:hover, &:focus {
+      color: @link-color-hover;
+    }
+  }
+}
+
+.link-muted {
+  .text-muted;
+  &:hover, &:focus {
+    color: @link-color;
+  }
+}
+
+.link-white {
+  color: #fff;
+  &:hover, &:focus {
+    color: darken(#fff, 5%);
+  }
+}
+
+.masthead {
+  margin-top: 3em;
+}
+
+// Full width section blocks
+// -------------------------
+.section-xxs {
+  padding: .5em 0;
+}
+.section-xs {
+  padding: 1em 0;
+}
+.section-sm {
+  padding: 2em 0;
+}
+.section-md {
+  padding: 5em 0;
+}
+.section-lg {
+  padding: 8em 0;
+}
+
+// Contextual backgrounds
+// -------------------------
+// .section-variant(@background-color, @heading-color, @text-color);
+
+.bg-primary {
+  .section-variant(@brand-primary, #fff, #fff);
+}
+.bg-primary-light {
+  .section-variant(@brand-primary-light, #fff, #fff);
+}
+.bg-primary-lighter {
+  .section-variant(@brand-primary-lighter, #fff, #fff);
+}
+.bg-primary-dark {
+  .section-variant(@brand-primary-dark, #fff, #fff);
+}
+.bg-primary-darker {
+  .section-variant(@brand-primary-darker, #fff, #fff);
+}
+// -------------------------
+.bg-secondary {
+  .section-variant(@brand-secondary, #fff, #fff);
+}
+.bg-secondary-light {
+  .section-variant(@brand-secondary-light, #fff, #fff);
+}
+.bg-secondary-lighter {
+  .section-variant(@brand-secondary-lighter, #fff, #fff);
+}
+.bg-secondary-dark {
+  .section-variant(@brand-secondary-dark, #fff, #fff);
+}
+.bg-secondary-darker {
+  .section-variant(@brand-secondary-darker, #fff, #fff);
+}
+// -------------------------
+.bg-tertiary {
+  .section-variant(@brand-tertiary, #fff, #fff);
+}
+.bg-tertiary-light {
+  .section-variant(@brand-tertiary-light, #fff, #fff);
+}
+.bg-tertiary-lighter {
+  .section-variant(@brand-tertiary-lighter, #fff, #fff);
+}
+.bg-tertiary-dark {
+  .section-variant(@brand-tertiary-dark, #fff, #fff);
+}
+.bg-tertiary-darker {
+  .section-variant(@brand-tertiary-darker, #fff, #fff);
+}
+// -------------------------
+.bg-info {
+  .section-variant(@brand-info, #fff, #fff);
+}
+.bg-info-light {
+  .section-variant(@brand-info-light, #fff, #fff);
+}
+.bg-info-lighter {
+  .section-variant(@brand-info-lighter, #fff, #fff);
+}
+.bg-info-dark {
+  .section-variant(@brand-info-dark, #fff, #fff);
+}
+.bg-info-darker {
+  .section-variant(@brand-info-darker, #fff, #fff);
+}
+// -------------------------
+.bg-success {
+  .section-variant(@brand-success, #fff, #fff);
+}
+.bg-success-light {
+  .section-variant(@brand-success-light, #fff, #fff);
+}
+.bg-success-lighter {
+  .section-variant(@brand-success-lighter, #fff, #fff);
+}
+.bg-success-dark {
+  .section-variant(@brand-success-dark, #fff, #fff);
+}
+.bg-success-darker {
+  .section-variant(@brand-success-darker, #fff, #fff);
+}
+// -------------------------
+.bg-warning {
+  .section-variant(@brand-warning, #fff, #fff);
+}
+.bg-warning-light {
+  .section-variant(@brand-warning-light, #fff, #fff);
+}
+.bg-warning-lighter {
+  .section-variant(@brand-warning-lighter, #fff, #fff);
+}
+.bg-warning-dark {
+  .section-variant(@brand-warning-dark, #fff, #fff);
+}
+.bg-warning-darker {
+  .section-variant(@brand-warning-darker, #fff, #fff);
+}
+// -------------------------
+.bg-danger {
+  .section-variant(@brand-danger, #fff, #fff);
+}
+.bg-danger-light {
+  .section-variant(@brand-danger-light, #fff, #fff);
+}
+.bg-danger-lighter {
+  .section-variant(@brand-danger-lighter, #fff, #fff);
+}
+.bg-danger-dark {
+  .section-variant(@brand-danger-dark, #fff, #fff);
+}
+.bg-danger-darker {
+  .section-variant(@brand-danger-darker, #fff, #fff);
+}
+// -------------------------
+.bg-highlight {
+  .section-variant(@brand-highlight, @headings-font-color, @text-color);
+}
+.bg-white {
+  .section-variant(#fff, inherit, @text-color);
+}
+.bg-gray-lighter {
+  .section-variant(@brand-gray-lighter, @headings-font-color, @text-color);
+}
+.bg-gray-light {
+  .section-variant(@brand-gray-light, #fff, #fff);
+}
+.bg-gray {
+  .section-variant(@brand-gray, #fff, #fff);
+}
+.bg-gray-dark {
+  .section-variant(@brand-gray-dark, #fff, #fff);
+}
+.bg-gray-darker {
+  .section-variant(@brand-gray-darker, #fff, #fff);
+}
+.bg-black {
+  .section-variant(#000, #fff, #fff);
+}
+// -------------------------
+.bg-primary-trans {
+  .section-variant(fade(@brand-primary, 80%), #fff, #fff);
+}
+.bg-secondary-trans {
+  .section-variant(fade(@brand-secondary, 80%), #fff, #fff);
+}
+.bg-tertiary-trans {
+  .section-variant(fade(@brand-tertiary, 80%), #fff, #fff);
+}
+.bg-info-trans {
+  .section-variant(fade(@brand-info, 80%), #fff, #fff);
+}
+.bg-success-trans {
+  .section-variant(fade(@brand-success, 80%), #fff, #fff);
+}
+.bg-warning-trans {
+  .section-variant(fade(@brand-warning, 80%), #fff, #fff);
+}
+.bg-danger-trans {
+  .section-variant(fade(@brand-danger, 80%), #fff, #fff);
+}
+.bg-gray-trans {
+  .section-variant(fade(@brand-gray, 80%), #fff, #fff);
+}
+.bg-white-trans {
+  .section-variant(fade(#fff, 50%), @headings-font-color, @text-color);
+}
+.bg-black-trans {
+  .section-variant(fade(#000, 50%), #fff, #fff);
+}
+
+// Modifiers classes
+// -------------------------
+.padding-xs {
+  padding: .5em !important;
+}
+.padding-sm {
+  padding: 1em !important;
+}
+.padding-md {
+  padding: 2em !important;
+}
+.padding-lg {
+  padding: 3em !important;
+}
+.padding-xl {
+  padding: 4em !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+.radius-default {
+  .border-radius(@base-border-radius);
+}
+.no-radius {
+  .border-radius(0);
+}
+
+// Borders
+// -------------------------
+.no-border {
+  border: none !important;
+}
+.border-dashed {
+  border-width: 1px;
+  border-style: dashed;
+  border-color: @base-border-color;
+}
+.border-default {
+  border-width: 1px;
+  border-style: solid;
+  border-color: @base-border-color;
+}
+
+// Line breaks (spacers)
+// -------------------------
+[class*="spacer"]:after {
+  display: block;
+  content: " ";
+}
+.spacer-xs {
+  margin-bottom: .5em;
+  line-height: .5em; // IE
+}
+.spacer-sm {
+  margin-bottom: 1em;
+  line-height: 1em; // IE
+}
+.spacer-md {
+  margin-bottom: 2em;
+  line-height: 2em; // IE
+}
+.spacer-lg {
+  margin-bottom: 4em;
+  line-height: 4em; // IE
+}
+.spacer-xl {
+  margin-bottom: 8em;
+  line-height: 8em; // IE
+}
+
+// List - Image stream (e.g. flickr, dribbble, advertising, etc).
+// -------------------------
+.img-stream {
+  .clearfix();
+  margin-bottom: 0;
+  padding: 0;
+   li {
+    text-align: center;
+    float: left;
+    display: block;
+    margin: 0 0.4em 0.4em 0;
+  }
+}
+
+// List - social networks
+// -------------------------
+.social-networks {
+  padding-left: 0;
+  margin-bottom: 0;
+  .clearfix();
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 0.4em 0.4em 0;
+    .text-center & {
+      float: none;
+    }
+    .text-right & {
+      float: right;
+    }
+    a {
+      padding: 8px 10px;
+      font-size: @font-size-base*1.2;
+      color: #fff;
+    }
+  }
+}
+
+// Fix - FontAwesome
+// let stacked icons center under .text-center
+.fa-stack-1x, .fa-stack-2x {
+  left: 0;
+}
+
+// Images
+// -------------------------
+// Rounded corners
+.img-rounded {
+  border-radius: @base-border-radius;
+}
+// Image thumbnails
+.img-thumbnail {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid @base-border-color;
+  border-radius: @base-border-radius;
+}
+.img-rounded, .img-thumbnail, .img-circle {
+  margin-bottom: 1em;
+}
+.drop-left {
+  float: left;
+  margin-right: 0.8em;
+  margin-bottom: 0.5em;
+}
+.drop-right {
+  float: right;
+  margin-left: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+// negative offsets
+.offset-top-sm {
+  margin-top: -1em;
+}
+.offset-top-md {
+  margin-top: -2em;
+}
+.offset-top-lg {
+  margin-top: -4em;
+}
+.offset-top-xl {
+  margin-top: -8em;
+}
+// drop in, for images or drop-cap like elements
+.drop-in-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: .5em;
+}
+.drop-in-right {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: .5em;
+}
+
+.bg-custom-lg {
+  background: @brand-secondary url("../img/slide-1-2.jpg");
+  .background-size(cover);
+}
+
+// charts
+.chart {
+  max-width: 100%;
+}

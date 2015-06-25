@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="~/Content/patterns/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="~/Content/patterns/ico/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="~/Content/patterns/ico/favicon-144.png">
+    <link rel="stylesheet" href="~/Content/patterns/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/simple-lines/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Content/common.css">
+    <link rel="stylesheet" href="~/Content/patterns/css/theme.min.css">
+    <!--[if lt IE 9]>
+      <script src="~/Content/patterns/js/html5shiv.min.js"></script>
+      <script src="~/Content/patterns/js/selectivizr-min.js"></script>
+      <script src="~/Content/patterns/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg-secondary">
+    <section class="section-md">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-md-offset-4">
+                    <div class="panel panel-default">
+                        @RenderBody()
+                    </div><!-- /.panel -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    <!-- last but not least the javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="~/Content/patterns/js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="~/Content/patterns/bootstrap/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>
