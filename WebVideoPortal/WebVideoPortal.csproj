@@ -349,6 +349,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Views\Video\Index.cshtml" />
     <Content Include="Views\Questionaire\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\Production.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebVideoPortal.BL\WebVideoPortal.BL.csproj">

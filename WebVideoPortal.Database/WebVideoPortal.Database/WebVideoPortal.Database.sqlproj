@@ -70,9 +70,10 @@
     <RefactorLog Include="WebVideoPortal.Database.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WebVideoPortal_Database.local.publish.xml" />
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="WebVideoPortal.Database.local.publish.xml" />
+    <None Include="WebVideoPortal.Database.publish.xml" />
   </ItemGroup>
 </Project>
