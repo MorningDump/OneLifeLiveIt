@@ -8,7 +8,7 @@ namespace WebVideoPortal.Constants
 {
     public static class Strings
     {
-        public const string PasswordPolicy = "Password should be 8-15 symbols and contain at least one special character.";
+        public const string PasswordPolicy = "Password should be 6-15 symbols.";
         public const string PasswordNotMatch = "Password doesn't match.";
         public const string FixValidationErrors = "Please, fix validation errors.";
         public const string DuplicateEmail = "Duplicate email address.";
@@ -24,7 +24,7 @@ namespace WebVideoPortal.Constants
         public const string IncorrectCombination = "SORRY!<br /> We didn't recognize this combination of login/password";
         public const string Notification_DuplicateEmail = "We found {0} duplicate email addresses.";
         public const string QuestionaireSuccessfullyUpdated = "Thanks! Your answer has been successfully submitted";
-        public const string PasswordPolicyRegex = @"^(?=.*[da-zA-Z])(?=.*[^\da-zA-Z]).{8,15}$";
+        public const string PasswordPolicyRegex = @"^(?=.*).{6,15}$";
         public const string UrlRegex = @"^([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$";
     }
 }

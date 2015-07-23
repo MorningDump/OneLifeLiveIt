@@ -252,3 +252,24 @@
 .f-uppercase {
     text-transform:uppercase;
 }
+
+.logo-text {
+    width: 250px!important;
+    margin-left:5px;
+}
+
+.navbar-brand {
+    padding:0!important;
+}
+
+.panel-heading {
+    background-color: #ffffff!important;
+}
+
+.video-item h5 {
+    margin:10px 0 20px 0!important;
+}
+
+.sidebar-header {
+    background-color: #ffffff;
+}

@@ -143,8 +143,11 @@
     <Content Include="Content\patterns\bootstrap\css\bootstrap.css" />
     <Content Include="Content\patterns\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\patterns\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\patterns\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\patterns\chartjs\Chart.js" />
     <Content Include="Content\patterns\chartjs\Chart.min.js" />
+    <Content Include="Content\patterns\css\theme.css" />
     <Content Include="Content\patterns\css\theme.min.css" />
     <Content Include="Content\patterns\font-awesome\css\font-awesome.css" />
     <Content Include="Content\patterns\font-awesome\css\font-awesome.min.css" />
@@ -267,9 +270,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Global.asax" />
-    <Content Include="Images\logo-black.png" />
-    <Content Include="Images\logo-white.png" />
-    <Content Include="Images\user-male-2.jpg" />
     <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\patterns\bootstrap\fonts\glyphicons-halflings-regular.woff" />
@@ -280,6 +280,9 @@
     <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.eot" />
     <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.ttf" />
     <Content Include="Content\patterns\simple-lines\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logotext.png" />
+    <Content Include="Images\profile.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

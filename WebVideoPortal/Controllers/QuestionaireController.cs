@@ -20,6 +20,8 @@ namespace WebVideoPortal.Controllers
         {
             InitializeViewBag();
 
+            InitializeYears();
+
             var username = User.Identity.Name;
             var answer = _questionaire.GetAnswerByUserId(username);
 
@@ -43,6 +45,8 @@ namespace WebVideoPortal.Controllers
                 return RedirectToAction("Login");
             }
 
+            InitializeYears();
+
             try
             {
                 await _questionaire.PostAnswer(model, username);
@@ -61,7 +65,17 @@ namespace WebVideoPortal.Controllers
                 return View(model);
             }
 
-            return View(model);
+            return RedirectToAction("Index", "Video");
+        }
+
+        private void InitializeYears()
+        {
+            var years = new List<int>();
+            for (int i = 1940; i <= 2000; i++)
+            {
+                years.Add(i);
+            }
+            ViewBag.Years = years.Select(y => new SelectListItem { Text = y.ToString(), Value = y.ToString() }).ToList();
         }
     }
 }

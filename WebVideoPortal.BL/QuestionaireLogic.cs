@@ -56,6 +56,14 @@ namespace WebVideoPortal.BL
             return new QuestionaireModel();
         }
 
+        public bool CheckAnswerByUserId(string username)
+        {
+            var userId = GetUserIdByEmail(username);
+            var model = Entities.Questionaires.FirstOrDefault(u => u.UserId == userId);
+
+            return model != null;
+        }
+
         private int GetUserIdByEmail(string email)
         {
             var user = Entities.Users.FirstOrDefault(u => u.Email == email);

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="~/Content/patterns/prism/prism.css">
     <link rel="stylesheet" href="~/Content/patterns/summernote/summernote.css">
     <link rel="stylesheet" href="~/Content/patterns/tags-input/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="~/Content/patterns/css/theme.min.css">
+    <link rel="stylesheet" href="~/Content/patterns/css/theme.css">
     <link rel="stylesheet" href="~/Content/common.css">
     <!--[if lt IE 9]>
       <script src="~/Content/patterns/js/html5shiv.min.js"></script>
@@ -33,13 +33,12 @@
     <div class="dashboard-wrapper">
         <aside class="dashboard-sidebar sidebar-primary">
             <div class="sidebar-header text-center">
-                <a class="navbar-brand" href="#link">
-                    <img class="brand-logo" alt="Logo" src="~/Content/patterns/img/logo-white.png">
-                    <span class="brand-name">Name</span>
+                <a class="navbar-brand" href="@Url.Action("Index", "Video")">
+                    <img class="brand-logo" alt="Logo" src="~/Images/logo.png">
                 </a><!-- /.navbar-brand -->
             </div><!-- /.sidebar-header -->
             <div class="sidebar-subheader text-center">
-                <img class="img-circle" src="~/Content/patterns/img/user-male-2.jpg" width="100" height="100" alt="img">
+                <img class="img-circle" src="~/Images/profile.jpg" width="100" height="100" alt="img">
                 <p class="no-margin"><strong>@ViewBag.UserName</strong></p>
             </div><!-- /.sidebar-subheader -->
             <ul class="sidebar-nav">

@@ -14,7 +14,7 @@
 <section class="section-sm">
     <div class="container-fluid">
         <h1>@ViewBag.Title</h1>
-        <p class="help-block">Please, answer some questions. It shouldn't take more than 5 minutes.</p>
+        <p class="help-block">Before jumping on to our videos, please take a minute to complete a couple of questions.</p>
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6">
@@ -28,11 +28,7 @@
                         {
                             <div class="form-group">
                                 <label for="Email">Year Of Birth</label>
-                                @Html.DropDownListFor(m => m.YearOfBirth, new List<SelectListItem>{
-                                new SelectListItem() {Text = "2015", Value="2015"},
-                                new SelectListItem() {Text = "2014", Value="2014"},
-                                new SelectListItem() {Text = "2013", Value="2013"}
-                            }, new { @class = "form-control" })
+                                @Html.DropDownListFor(m => m.YearOfBirth, ViewBag.Years as List<SelectListItem>, new { @class = "form-control" })
                                 <span class="help-block">
                                     @Html.ValidationMessageFor(m => m.YearOfBirth)
                                 </span>
@@ -46,58 +42,36 @@
                             </div>
                             <div class="form-group">
                                 <label for="password">Occupation</label>
-                                @Html.DropDownListFor(m => m.Occupation, new List<SelectListItem>{
-                                new SelectListItem() {Text = "Programmer", Value="Programmer"},
-                                new SelectListItem() {Text = "Accountant", Value="Accountant"},
-                                new SelectListItem() {Text = "Business Analyst", Value="Business Analyst"}
-                            }, "Select Your Occupation", new { @class = "form-control" })
+                                @Html.TextBoxFor(m => m.Occupation, new { @class = "form-control" })
                                 <span class="help-block">
                                     @Html.ValidationMessageFor(m => m.Occupation)
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="password">Height</label>
-                                @Html.DropDownListFor(m => m.Height, new List<SelectListItem>{
-                                new SelectListItem() {Text = "5' 7", Value="5' 7"},
-                                new SelectListItem() {Text = "5' 8", Value="5' 8"},
-                                new SelectListItem() {Text = "5 '9", Value="5 '9"}
-                            },"Select Height", new { @class = "form-control" })
+                                <label for="password">Height (cm's)</label>
+                                @Html.TextBoxFor(m => m.Height, new { @class = "form-control" })
                                 <span class="help-block">
                                     @Html.ValidationMessageFor(m => m.Height)
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="password">Weight</label>
-                                @Html.DropDownListFor(m => m.Weight, new List<SelectListItem>{
-                                new SelectListItem() {Text = "80", Value="80"},
-                                new SelectListItem() {Text = "90", Value="90"},
-                                new SelectListItem() {Text = "100", Value="100"}
-                            }, "Select Your Weight", new { @class = "form-control" })
+                                <label for="password">Weight (Kg's)</label>
+                                @Html.TextBoxFor(m => m.Weight, new { @class = "form-control" })
                                 <span class="help-block">
                                     @Html.ValidationMessageFor(m => m.Weight)
                                 </span>
                             </div>
                             <div class="form-group">
                                 <label for="password">Activity Level</label>
-                                @Html.DropDownListFor(model => model.ActivityLevel, new SelectList(Enum.GetValues(typeof(ActivityLevel))), new { @class = "form-control" })
+                                @Html.CustomEnumDropDownListFor(model => model.ActivityLevel, new { @class = "form-control" })
                                 <span class="help-block">
                                     @Html.ValidationMessageFor(m => m.ActivityLevel)
                                 </span>
                             </div>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-primary">Save & Go To Videos</button>
                         }
                     </div>
                 </div><!-- /.panel-body -->
-                <div class="col-sm-4 m-t-xxl">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Some Tips</h3>
-                        </div><!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <p>Due to the special nature of cloud and dedicated servers and their high costs to us, we are unable to accommodate the same suspension and termination policy that we do for our shared and reseller accounts. Cloud and dedicated server customers are offered a 3 day grace period before suspension of their service, and are terminated after 10 days.</p>
-                        </div><!-- /.panel-body -->
-                    </div>
-                </div>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container -->
