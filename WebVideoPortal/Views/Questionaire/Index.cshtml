@@ -14,66 +14,71 @@
 <section class="section-sm">
     <div class="container-fluid">
         <h1>@ViewBag.Title</h1>
-        <p class="help-block">Before jumping on to our videos, please take a minute to complete a couple of questions.</p>
+        <p class="help-block">Before jumping on to our videos, please take a minute to complete a couple of questions. Your answers are totally confidential and will not be shared with your company....but rather give us a sense of who's watching and help us think about our next set of videos we can design to share with you!</p>
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6">
                     <div class="panel-body">
                         @if (!Model.IsValid)
                         {
-                            <p class="text-center space-15 r-color">@Model.ErrorMessage</p>
+                        <p class="text-center space-15 r-color">@Model.ErrorMessage</p>
                         }
                         <p class="text-center space-25 green-color">@Model.InformationMessage</p>
                         @using (Html.BeginForm("Index", "Questionaire", FormMethod.Post, new { @class = "validatable-form" }))
                         {
-                            <div class="form-group">
-                                <label for="Email">Year Of Birth</label>
-                                @Html.DropDownListFor(m => m.YearOfBirth, ViewBag.Years as List<SelectListItem>, new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.YearOfBirth)
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Sex</label>
-                                @Html.DropDownListFor(model => model.Sex, new SelectList(Enum.GetValues(typeof(Sex))),"Select Gender", new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.Sex)
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Occupation</label>
-                                @Html.TextBoxFor(m => m.Occupation, new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.Occupation)
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Height (cm's)</label>
-                                @Html.TextBoxFor(m => m.Height, new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.Height)
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Weight (Kg's)</label>
-                                @Html.TextBoxFor(m => m.Weight, new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.Weight)
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Activity Level</label>
-                                @Html.CustomEnumDropDownListFor(model => model.ActivityLevel, new { @class = "form-control" })
-                                <span class="help-block">
-                                    @Html.ValidationMessageFor(m => m.ActivityLevel)
-                                </span>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Save & Go To Videos</button>
+                        <div class="form-group">
+                            <label for="Email">Year Of Birth</label>
+                            @Html.DropDownListFor(m => m.YearOfBirth, ViewBag.Years as List<SelectListItem>, new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.YearOfBirth)
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Sex</label>
+                            @Html.DropDownListFor(model => model.Sex, new SelectList(Enum.GetValues(typeof(Sex))),"Select Gender", new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.Sex)
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Occupation</label>
+                            @Html.TextBoxFor(m => m.Occupation, new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.Occupation)
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Height (cm's)</label>
+                            @Html.TextBoxFor(m => m.Height, new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.Height)
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Weight (Kg's)</label>
+                            @Html.TextBoxFor(m => m.Weight, new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.Weight)
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Activity Level</label>
+                            @Html.CustomEnumDropDownListFor(model => model.ActivityLevel, new { @class = "form-control" })
+                            <span class="help-block">
+                                @Html.ValidationMessageFor(m => m.ActivityLevel)
+                            </span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save & Go To Videos</button>
                         }
                     </div>
                 </div><!-- /.panel-body -->
             </div><!-- /.col -->
         </div><!-- /.row -->
+        <div>
+            <div class="col-sm-12">
+                <p>Further information about our <a target="_blank" href="http://onelifeliveit.net.au/privacy-policy/">Privacy Policy</a> can be found on our website: <a target="_blank" href="http://onelifeliveit.net.au/">www.onelifeliveit.net.au</a></p>
+            </div>
+        </div>
     </div><!-- /.container -->
 </section>
 
